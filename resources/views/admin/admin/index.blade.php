@@ -25,10 +25,8 @@
                     <h3 class="card-title">Listado de Municipalidades</h3>
                 </div>
             <!-- /.card-header -->
-            <div class="card-body">
-                <form class="form-horizontal" role="form" method="" action="" enctype="multipart/form-data">
-                            
-                    <div class="form-group">
+            <div class="card-body">            
+                    <div class="form-group col-md-4">
                         <label for="Departamento">Departamento</label>
                         <select name="Departamento" id="Departamento" class="form-control input-lg dynamic" data-dependent="Provincia">
                             <option value="">Selecionar Departamento </option>
@@ -38,20 +36,22 @@
                            </select>
                 </div>
                 
-                <div class="form-group">
+                <div class="form-group col-md-4">
                     <label for="Provincia">Provincia</label>
                     <select name="Provincia" id="Provincia" class="form-control input-lg dynamic" data-dependent="Distrito">
                         <option value="">Selecionar Provincia</option>
                        </select>
                 </div>
                 
-                <div class="form-group">
+                <div class="form-group col-md-4">
                     <label for="Distrito">Distrito</label>
                     <select name="Distrito" id="Distrito" class="form-control input-lg">
                         <option value="">Selecionar Distrito</option>
                        </select>
                 </div>
                 {{ csrf_field() }}
+            </div>  
+                
                 <table id="categories" class="table table-bordered table-striped">
                     <thead>
                         <tr>
