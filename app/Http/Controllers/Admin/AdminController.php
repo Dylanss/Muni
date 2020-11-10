@@ -14,7 +14,7 @@ class AdminController extends Controller
     }
     public function index()
     {
-        $country_list = DB::table('municipalidades')
+        $country_list = DB::table('muni_fr')
                             ->groupBy('Departamento')
                             ->get();
         return view('admin.admin.index')->with('country_list', $country_list);
@@ -25,7 +25,7 @@ class AdminController extends Controller
      $select = $request->get('select');
      $value = $request->get('value');   
      $dependent = $request->get('dependent');
-     $data = DB::table('municipalidades')
+     $data = DB::table('muni_fr')
        ->where($select, $value)
        ->groupBy($dependent)
        ->get();
