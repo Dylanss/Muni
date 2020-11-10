@@ -26,7 +26,7 @@
                 </div>
             <!-- /.card-header -->
             <div class="card-body">            
-                    <div class="form-group col-md-4">
+                    <div class="form-group col-md-4 float-right" >
                         <label for="Departamento">Departamento</label>
                         <select name="Departamento" id="Departamento" class="form-control input-lg dynamic" data-dependent="Provincia">
                             <option value="">Selecionar Departamento </option>
@@ -36,14 +36,14 @@
                            </select>
                 </div>
                 
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-4 float-right">
                     <label for="Provincia">Provincia</label>
                     <select name="Provincia" id="Provincia" class="form-control input-lg dynamic" data-dependent="Distrito">
                         <option value="">Selecionar Provincia</option>
                        </select>
                 </div>
                 
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-4 float-right">
                     <label for="Distrito">Distrito</label>
                     <select name="Distrito" id="Distrito" class="form-control input-lg">
                         <option value="">Selecionar Distrito</option>
