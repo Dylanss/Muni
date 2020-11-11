@@ -51,8 +51,9 @@
                 </div>
                 {{ csrf_field() }}
             </div>  
-                
+   
                 <table id="categories" class="table table-bordered table-striped">
+                    
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -67,6 +68,7 @@
                         </tr>
                     </thead>
                     <tbody>
+                         <!--
                         <tr>
                             <td>1</td>
                             <td>Lima</td>
@@ -212,7 +214,7 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
+            </div> -->
             <!-- /.card-body -->
             </div>
             <!-- /.card -->
