@@ -25,4 +25,4 @@ Route::get('/admin/admin/muni', 'Admin\MuniController@index')->name('admin.admin
 Route::get('/admin/admin/evaluador', 'Admin\EvaluadoresController@evaluador')->name('admin.admin.evaluador');
 Route::get('/admin/admin/asignacion', 'Admin\AsignacionController@asignacion')->name('admin.admin.asignacion');
 Route::get('/admin/admin/registro', 'Admin\RegistroController@registro')->name('admin.admin.registro');
-Route::get('/admin/admin/fetch', 'Admin\AdminController@fetch')->name('dynamicdependent.fetch');
+Route::get('/admin/admin/fetch', 'Admin\MuniController@fetch')->name('dynamicdependent.fetch');
