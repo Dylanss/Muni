@@ -249,7 +249,7 @@ return [
         ['header' => 'ADMINISTRADOR'],
         [
             'text' => 'Municipalidades',
-            'url'  => 'admin/admin',
+            'url'  => 'admin/admin/muni',
             'icon' => 'fas fa-university',
         ],
         [

@@ -20,8 +20,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/admin/admin', 'Admin\AdminController@index')->name('admin.admin');
-Route::get('/admin/admin/muni', 'Admin\AdminController@index')->name('admin.admin.muni');
+Route::get('/admin/admin', 'Admin\MuniController@index')->name('admin.admin');
+Route::get('/admin/admin/muni', 'Admin\MuniController@index')->name('admin.admin.muni');
 Route::get('/admin/admin/evaluador', 'Admin\EvaluadoresController@evaluador')->name('admin.admin.evaluador');
 Route::get('/admin/admin/asignacion', 'Admin\AsignacionController@asignacion')->name('admin.admin.asignacion');
 Route::get('/admin/admin/registro', 'Admin\RegistroController@registro')->name('admin.admin.registro');
