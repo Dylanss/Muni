@@ -9,9 +9,6 @@
 @section('content_header')
 <h1>
     Municipalidades
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-create-category">
-        Registrar
-    </button>
 </h1>
 @stop
 
@@ -109,47 +106,41 @@
             <form role="form" action="/admin/categories/store" method="POST">
                 <div class="card-body">
                         <form class="form-horizontal" role="form" method="" action="" enctype="multipart/form-data">
-                            
-                                <div class="form-group">
-                                    <label for="Departamento">Departamento</label>
-                                    <select name="Departamento" id="departamento" class="form-control input-lg dynamic" data-dependent="provincia">
-                                        <option value="">Selecionar Departamento </option>
-                                        @foreach($country_list as $departamento)
-                                        <option value="{{ $departamento->departamento}}">{{ $departamento->departamento }}</option>
-                                        @endforeach
-                                       </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="Provincia">Provincia</label>
-                                <select name="Provincia" id="provincia" class="form-control input-lg dynamic" data-dependent="distrito">
-                                    <option value="">Selecionar Provincia</option>
-                                   </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="Distrito">Distrito</label>
-                                <select name="Distrito" id="distrito" class="form-control input-lg">
-                                    <option value="">Selecionar Distrito</option>
-                                   </select>
-                            </div>
                             {{ csrf_field() }}
                             
                             <div class="form-group">
                                 <label for="Municipalidad">Municipalidad</label>
-                                <select class="form-control" name="department_id">
-                                    <option selected disabled>Selecionar Municipalidad</option>
+                                    <input id="zip" type="text" class="form-control" name="zip" value="" required placeholder="Municipalidad" readonly>
+    
                                     
-                                        <option value=""></option>
+                                        <span class="help-block">
+                                            <strong></strong>
+                                        </span>
                                     
-                                </select>
-                                 
-                                    <span class="help-block">
-                                        <strong></strong>
-                                    </span>
-                                
                             </div>
-                            
+
+                            <div class="form-group">
+                                <label for="Municipalidad">Dirección</label>
+                                    <input id="zip" type="text" class="form-control" name="zip" value="" required placeholder="Dirección">
+    
+                                    
+                                        <span class="help-block">
+                                            <strong></strong>
+                                        </span>
+                                    
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Municipalidad">Tipo</label>
+                                    <input id="zip" type="text" class="form-control" name="zip" value="" required placeholder="Tipo" readonly>
+    
+                                    
+                                        <span class="help-block">
+                                            <strong></strong>
+                                        </span>
+                                    
+                            </div>
+
                             <div class="form-group">
                                 <label for="Municipalidad">Alcalde</label>
                                     <input id="zip" type="text" class="form-control" name="zip" value="" required placeholder="Alcalde">
@@ -159,13 +150,6 @@
                                             <strong></strong>
                                         </span>
                                     
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="Direccion">Direccion</label>
-                                    <div class="input-group date">
-                                        <input type="text" value="" name="birthdate" class="form-control" id="birthDate" required placeholder="Direccion" >
-                                    </div>
                             </div>
                             
                             <div class="form-group">
