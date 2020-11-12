@@ -22,8 +22,8 @@ class MuniController extends Controller
     public function index()
     {
         $municipalidades = Muni::all();
-        $country_list = DB::table('muni_fr')
-                          ->groupBy('Departamento')
+        $country_list = DB::table('munis')
+                          ->groupBy('departamento')
                             ->get();
        return view('admin.muni.index',compact('municipalidades'))->with('country_list', $country_list);
     }
@@ -34,7 +34,7 @@ class MuniController extends Controller
      $select = $request->get('select');
      $value = $request->get('value');   
      $dependent = $request->get('dependent');
-     $data = DB::table('muni_fr')
+     $data = DB::table('munis')
        ->where($select, $value)
        ->groupBy($dependent)
        ->get();

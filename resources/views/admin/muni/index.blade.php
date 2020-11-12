@@ -28,24 +28,24 @@
             <div class="card-body">            
                     <div class="form-group col-md-4 float-left" >
                         <label for="Departamento">Departamento</label>
-                        <select name="Departamento" id="Departamento" class="form-control input-lg dynamic" data-dependent="Provincia">
+                        <select name="Departamento" id="departamento" class="form-control input-lg dynamic" data-dependent="provincia">
                             <option value="">Selecionar Departamento </option>
-                            @foreach($country_list as $Departamento)
-                            <option value="{{ $Departamento->Departamento}}">{{ $Departamento->Departamento }}</option>
+                            @foreach($country_list as $departamento)
+                            <option value="{{ $departamento->departamento}}">{{ $departamento->departamento }}</option>
                             @endforeach
                            </select>
                     </div>
                 
                 <div class="form-group col-md-4 float-left">
                     <label for="Provincia">Provincia</label>
-                    <select name="Provincia" id="Provincia" class="form-control input-lg dynamic" data-dependent="Distrito">
+                    <select name="Provincia" id="provincia" class="form-control input-lg dynamic" data-dependent="distrito">
                         <option value="">Selecionar Provincia</option>
                        </select>
                 </div>
                 
                 <div class="form-group col-md-4 float-left">
                     <label for="Distrito">Distrito</label>
-                    <select name="Distrito" id="Distrito" class="form-control input-lg">
+                    <select name="Distrito" id="distrito" class="form-control input-lg">
                         <option value="">Selecionar Distrito</option>
                        </select>
                 </div>
@@ -112,24 +112,24 @@
                             
                                 <div class="form-group">
                                     <label for="Departamento">Departamento</label>
-                                    <select name="Departamento" id="Departamento" class="form-control input-lg dynamic" data-dependent="Provincia">
+                                    <select name="Departamento" id="departamento" class="form-control input-lg dynamic" data-dependent="provincia">
                                         <option value="">Selecionar Departamento </option>
-                                        @foreach($country_list as $Departamento)
-                                        <option value="{{ $Departamento->Departamento}}">{{ $Departamento->Departamento }}</option>
+                                        @foreach($country_list as $departamento)
+                                        <option value="{{ $departamento->departamento}}">{{ $departamento->departamento }}</option>
                                         @endforeach
                                        </select>
                             </div>
                             
                             <div class="form-group">
                                 <label for="Provincia">Provincia</label>
-                                <select name="Provincia" id="Provincia" class="form-control input-lg dynamic" data-dependent="Distrito">
+                                <select name="Provincia" id="provincia" class="form-control input-lg dynamic" data-dependent="distrito">
                                     <option value="">Selecionar Provincia</option>
                                    </select>
                             </div>
                             
                             <div class="form-group">
                                 <label for="Distrito">Distrito</label>
-                                <select name="Distrito" id="Distrito" class="form-control input-lg">
+                                <select name="Distrito" id="distrito" class="form-control input-lg">
                                     <option value="">Selecionar Distrito</option>
                                    </select>
                             </div>
@@ -238,13 +238,13 @@ $(document).ready(function() {
       }
      });
     
-     $('#Departamento').change(function(){
-      $('#Provincia').val('');
-      $('#Distrito').val('');
+     $('#departamento').change(function(){
+      $('#provincia').val('');
+      $('#distrito').val('');
      });
     
-     $('#Provincia').change(function(){
-      $('#Distrito').val('');
+     $('#provincia').change(function(){
+      $('#distrito').val('');
      });
      
     
