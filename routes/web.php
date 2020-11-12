@@ -20,13 +20,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
 Route::resource('/admin/muni', 'Admin\MuniController');
-
-//Route::get('/admin/muni', 'Admin\MuniController@index')->name('admin.muni.index');
 
 
 Route::get('/admin/evaluador', 'Admin\EvaluadoresController@evaluador')->name('admin.evaluador');
 Route::get('/admin/asignacion', 'Admin\AsignacionController@asignacion')->name('admin.asignacion');
 Route::get('/admin/registro', 'Admin\RegistroController@registro')->name('admin.registro');
 Route::get('/admin/fetch', 'Admin\MuniController@fetch')->name('dynamicdependent.fetch');
+
