@@ -13,6 +13,6 @@ class EvaluadoresController extends Controller
     }
     public function evaluador()
     {
-        return view('admin.admin.evaluador');
+        return view('admin.evaluador');
     }
 }

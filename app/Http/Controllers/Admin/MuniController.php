@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use DB;
+use App\Muni;
 
 class MuniController extends Controller
 {
@@ -20,10 +21,11 @@ class MuniController extends Controller
      */
     public function index()
     {
+        $municipalidades = Muni::all();
         $country_list = DB::table('muni_fr')
-                            ->groupBy('Departamento')
+                          ->groupBy('Departamento')
                             ->get();
-        return view('admin.admin.muni')->with('country_list', $country_list);
+       return view('admin.muni.index',compact('municipalidades'))->with('country_list', $country_list);
     }
 
 
@@ -71,7 +73,7 @@ class MuniController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id) 
     {
         //
     }

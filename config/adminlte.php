@@ -249,22 +249,22 @@ return [
         ['header' => 'ADMINISTRADOR'],
         [
             'text' => 'Municipalidades',
-            'url'  => 'admin/admin/muni',
+            'url'  => 'admin/muni',
             'icon' => 'fas fa-university',
         ],
         [
             'text' => 'Evaluadores',
-            'url'  => 'admin/admin/evaluador',
+            'url'  => 'admin/evaluador',
             'icon' => 'fas fa-user-tie',
         ],
         [
             'text' => 'Asignación',
-            'url'  => 'admin/admin/asignacion',
+            'url'  => 'admin/asignacion',
             'icon' => 'fas fa-user-tie',
         ],
         [
             'text'    => 'Registros Historicos',
-            'url'  => 'admin/admin/registro',
+            'url'  => 'admin/registro',
             'icon'    => 'fas fa-clipboard',
         ],
     ],

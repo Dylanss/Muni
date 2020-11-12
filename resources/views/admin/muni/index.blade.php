@@ -68,153 +68,23 @@
                         </tr>
                     </thead>
                     <tbody>
-                         <!--
+                        @foreach($municipalidades as $Municipalidad)
                         <tr>
-                            <td>1</td>
-                            <td>Lima</td>
-                            <td>Jr. de la Unión N° 300</td>
-                            <td>PROVINCIAL</td>
-                            <td>Muñoz Wells Jorge</td>
-                            <td>WWW.MUNLIMA.GOB.PE</td>
-                            <td>10.000</td>
-                            <td>S/.20.000</td>
+                            <td>{{ $Municipalidad->id_Municipalidad}}</td>
+                            <td>{{ $Municipalidad->nombre}}</td>
+                            <td>{{ $Municipalidad->direccion}}</td>
+                            <td>{{ $Municipalidad->tipo}}</td>
+                            <td>{{ $Municipalidad->alcalde}}</td>
+                            <td>{{ $Municipalidad->paginaweb}}</td>
+                            <td>{{ $Municipalidad->poblacion}}</td>
+                            <td>S/{{ $Municipalidad->monto_autorizado}}</td>
                             <td>
                                 <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-create-category">Editar</button>
                             </td>
                         </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Ancon</td>
-                            <td>Malecón Ferreyros N° 376</td>
-                            <td>DISTRITAL</td>
-                            <td>Barrera Bernui John</td>
-                            <td>WWW.MUNIANCON.GOB.PE</td>
-                            <td>10.000</td>
-                            <td>S/.20.000</td>
-                            <td>
-                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-create-category">Editar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>ATE</td>
-                            <td>Av. Nicolás Ayllón N° 5818</td>
-                            <td>DISTRITAL</td>
-                            <td>Cuellar Alegría Edde</td>
-                            <td>WWW.MUNIATE.GOB.PE</td>
-                            <td>10.000</td>
-                            <td>S/.20.000</td>
-                            <td>
-                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-create-category">Editar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Barranca</td>
-                            <td>Jr. Zavala N° 500</td>
-                            <td>PROVINCIAL</td>
-                            <td>Zender Sanchez Ricardo</td>
-                            <td>WWW.MUNIVES.GOB.PE</td>
-                            <td>10.000</td>
-                            <td>S/.20.000</td>
-                            <td>
-                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-create-category">Editar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Paramonga</td>
-                            <td>Av. Almirante Miguel Grau S/N</td>
-                            <td>DISTRITAL</td>
-                            <td>García Pagador Eduardo</td>
-                            <td>WWW.MUNIPARAMONGA.GOB.PE</td>
-                            <td>10.000</td>
-                            <td>S/.20.000</td>
-                            <td>
-                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-create-category">Editar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>Supe</td>
-                            <td>Jr. San Martín N° 446</td>
-                            <td>DISTRITAL</td>
-                            <td>Nishijima Julián</td>
-                            <td>WWW.MUNISUPE.GOB.PE</td>
-                            <td>10.000</td>
-                            <td>S/.20.000</td>
-                            <td>
-                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-create-category">Editar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>Canta</td>
-                            <td>Jr. Independencia N° 308</td>
-                            <td>PROVINCIAL</td>
-                            <td>Paredes Salcedo Arturo</td>
-                            <td>WWW.MUNICANTA.GOB.PE</td>
-                            <td>10.000</td>
-                            <td>S/.20.000</td>
-                            <td>
-                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-create-category">Editar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>Chilca</td>
-                            <td>Av. Mariano Ignacio Prado N° 496</td>
-                            <td>DISTRITAL</td>
-                            <td>Rosas Chauca Navarro Alfredo</td>
-                            <td>WWW.MUNICIPALIDADCHILCA.GOB.PE</td>
-                            <td>10.000</td>
-                            <td>S/.20.000</td>
-                            <td>
-                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-create-category">Editar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td>Imperial</td>
-                            <td>Jr. 28 de Julio N° 335</td>
-                            <td>DISTRITAL</td>
-                            <td>Alcala Rosas Elias</td>
-                            <td>WWW.MUNIIMPERIAL.GOB.PE</td>
-                            <td>10.000</td>
-                            <td>S/.20.000</td>
-                            <td>
-                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-create-category">Editar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td>San Vicente de Cañete</td>
-                            <td>Jr. Bolognesi N° 250 Km. 144</td>
-                            <td>PROVINCIAL</td>
-                            <td>Díaz De la Cruz Segundo</td>
-                            <td>WWW.MUNICANETE.GOB.PE</td>
-                            <td>10.000</td>
-                            <td>S/.20.000</td>
-                            <td>
-                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-create-category">Editar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>11</td>
-                            <td>Asia</td>
-                            <td>Calle La Mar N° 315</td>
-                            <td>DISTRITAL</td>
-                            <td>Alcántara Malásquez Jose</td>
-                            <td>WWW.MUNIASIA.GOB.PE</td>
-                            <td>10.000</td>
-                            <td>S/.20.000</td>
-                            <td>
-                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal-create-category">Editar</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div> -->
+                          @endforeach
+                    </table>
+
             <!-- /.card-body -->
             </div>
             <!-- /.card -->

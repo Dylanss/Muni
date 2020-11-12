@@ -13,6 +13,6 @@ class AsignacionController extends Controller
     }
     public function asignacion()
     {
-        return view('admin.admin.asignacion');
+        return view('admin.asignacion');
     }
 }

@@ -13,6 +13,6 @@ class RegistroController extends Controller
     }
     public function registro()
     {
-        return view('admin.admin.registro');
+        return view('admin.registro');
     }
 }
