@@ -1,4 +1,5 @@
-@extends('adminlte::page')
+
+{{-- @extends('adminlte::page') --}}
 
 @section('title','Admin - Categorias')
 
@@ -12,9 +13,13 @@
 </h1>
 @stop
 
+@extends('layouts.app')
+
+
 
 @section('content')
-<div class="container-fluid">
+<index-component></index-component>
+{{-- <div class="container-fluid">
     <div class="row">
         <div class="col-12">
             <div class="card">
@@ -186,7 +191,7 @@
       <!-- /.modal-content -->
     </div>
     <!-- /.modal-dialog -->
-</div>
+</div> --}}
 <!-- /.modal -->
 
 @endsection

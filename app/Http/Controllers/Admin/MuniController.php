@@ -10,10 +10,10 @@ use App\Muni;
 class MuniController extends Controller
 {
 
-    public function __construct()
+  /*   public function __construct()
     {
         $this->middleware('auth');
-    }
+    } */
     /**
      * Display a listing of the resource.
      *
@@ -21,11 +21,10 @@ class MuniController extends Controller
      */
     public function index()
     {
-        $municipalidades = Muni::all();
-        $country_list = DB::table('munis')
-                          ->groupBy('departamento')
-                            ->get();
-       return view('admin.muni.index',compact('municipalidades'))->with('country_list', $country_list);
+        $municipalidades = Muni::paginate(10);
+
+
+       return $municipalidades;
     }
 
 
@@ -73,9 +72,10 @@ class MuniController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id) 
+    public function show( $id) 
     {
-        //
+        $municipalidades = Muni::find($id);
+       return $municipalidades;
     }
 
     /**
@@ -84,9 +84,11 @@ class MuniController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
-        //
+        
+
+        
     }
 
     /**
@@ -98,7 +100,18 @@ class MuniController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $mu = Muni::find($id);
+
+        $mu->nombre = $request->nombre;
+        $mu->direccion = $request->direccion;
+        $mu->tipo = $request->tipo;
+        $mu->alcalde = $request->alcalde;
+        $mu->paginaweb = $request->paginaweb;
+        $mu->poblacion = $request->poblacion;
+        $mu->monto_autorizado = $request->monto_autorizado;
+
+
+        $mu->save(); 
     }
 
     /**

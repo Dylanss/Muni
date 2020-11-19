@@ -17,11 +17,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/admin/muni', function () {
+    return view('admin/muni/index');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('/admin/muni', 'Admin\MuniController');
-
+Route::resource('/load', 'Admin\MuniController');
+/* Route::get('/departannto', 'Admin\MuniController'); */
 
 Route::get('/admin/evaluador', 'Admin\EvaluadoresController@evaluador')->name('admin.evaluador');
 Route::get('/admin/asignacion', 'Admin\AsignacionController@asignacion')->name('admin.asignacion');
