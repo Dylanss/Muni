@@ -25,6 +25,7 @@ window.Vue = require('vue');
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('index-component', require('./components/muni/IndexComponent.vue').default);
 Vue.component('evaluador-component', require('./components/EvaluadoresComponent.vue').default);
+Vue.component('registro-component', require('./components/RegistroComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

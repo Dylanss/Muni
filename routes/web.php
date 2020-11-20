@@ -31,6 +31,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/load', 'Admin\MuniController');
 /* Route::get('/departannto', 'Admin\MuniController'); */
 Route::resource('/evaluador', 'Admin\EvaluadoresController');
+Route::resource('/registros', 'Admin\RegistroController');
 Route::get('/admin/asignacion', 'Admin\AsignacionController@asignacion')->name('admin.asignacion');
 Route::get('/admin/registro', 'Admin\RegistroController@registro')->name('admin.registro');
 Route::get('/admin/fetch', 'Admin\MuniController@fetch')->name('dynamicdependent.fetch');

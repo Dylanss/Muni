@@ -15,8 +15,12 @@
 </h1>
 @stop
 
-
 @section('content')
+@yield('body')
+
+<registro-component></registro-component>
+
+{{-- 
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
@@ -275,7 +279,7 @@
                                         </span>
                                     @endif
                                 </div>
-                            </div> --}}
+                            </div> 
 
                                 <div class="col-md-4">
                                     <div class="input-group date">
@@ -354,8 +358,9 @@
     </div>
     <!-- /.modal-dialog -->
 </div>
-<!-- /.modal -->
 
+<!-- /.modal -->
+--}}
 @endsection
 
 @section('js')
