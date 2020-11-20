@@ -246,26 +246,45 @@ return [
             'url'  => 'home',
             'icon'        => 'nav-icon fas fa-tachometer-alt',
         ],
-        ['header' => 'ADMINISTRADOR'],
+        //Administrador
+        ['can'    => 'administrador','header' => 'ADMINISTRADOR'],
         [
             'text' => 'Municipalidades',
+            'can'    => 'administrador',
             'url'  => 'admin/muni',
             'icon' => 'fas fa-university',
         ],
         [
             'text' => 'Evaluadores',
+            'can'    => 'administrador',
             'url'  => 'admin/evaluador',
             'icon' => 'fas fa-user-tie',
         ],
         [
             'text' => 'Asignación',
+            'can'    => 'administrador',
             'url'  => 'admin/asignacion',
             'icon' => 'fas fa-user-tie',
         ],
         [
             'text'    => 'Registros Historicos',
+            'can'    => 'administrador',
             'url'  => 'admin/registro',
             'icon'    => 'fas fa-clipboard',
+        ],
+        //Evaluador
+        ['can'    => 'evaluador','header' => 'EVALUADOR'],
+        [
+            'text' => 'Registro',
+            'can'    => 'evaluador',
+            'url'  => 'admin/muni',
+            'icon' => 'fas fa-university',
+        ],
+        [
+            'text' => 'Historial',
+            'can'    => 'evaluador',
+            'url'  => 'admin/evaluador',
+            'icon' => 'fas fa-user-tie',
         ],
     ],
 
