@@ -1,13 +1,8 @@
-
-{{-- @extends('adminlte::page') --}}
+@extends('adminlte::page')
 
 @section('title','Admin - Categorias')
 
 @section('css')
- 
-   
-<link rel="stylesheet" type="text/css" href="/DataTables/datatables.css">
-<script type="text/javascript" charset="utf8" src="/DataTables/datatables.js"></script>
 @stop
 
 @section('content_header')
@@ -16,11 +11,8 @@
 </h1>
 @stop
 
-@extends('layouts.app')
-@extends('adminlte::page')
-
 @section('content')
-
+@yield('body')
  
 
 <index-component></index-component>
@@ -205,15 +197,6 @@
 
 @section('js')
 <script>
-    $(document).ready(function() {
-        $('#cat').DataTable( {
-            "order": [[ 0, "asc" ]]
-        } );
-    } );
-</script>
- 
-
-<script>
     $(document).ready(function(){
     
      $('.dynamic').change(function(){
@@ -247,5 +230,5 @@
      
     
     });
-    </script>
+    </script> 
 @stop

@@ -17,7 +17,10 @@
 
 
 @section('content')
-<div class="container-fluid">
+@yield('body')
+
+<evaluador-component></evaluador-component>
+{{-- <div class="container-fluid">
     <div class="row">
         <div class="col-12">
             <div class="card">
@@ -62,7 +65,7 @@
                             <td>
                                  <button type="button" class="btn btn-warning" data-toggle="" data-target="#modal-create-category">Editar</button>
 
-	                            <button type="button" class="btn btn-danger data-toggle="modal" data-target="#modal-create-category">Eliminar</button>
+	                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-create-category">Eliminar</button>
                             </td>
                         </tr>
                         <tr>
@@ -74,7 +77,7 @@
                             <td>Inactivo</td>
                             <td>
                                 <button type="button" class="btn btn-warning" data-toggle="" data-target="#modal-create-category">Editar</button>
-                                <button type="button" class="btn btn-danger data-toggle="modal" data-target="#modal-create-category">Eliminar</button>
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-create-category">Eliminar</button>
                             </td>
                         </tr>
                         <tr>
@@ -86,7 +89,7 @@
                             <td>Inactivo</td>
                             <td>
                                 <button type="button" class="btn btn-warning" data-toggle="" data-target="#modal-create-category">Editar</button>
-                                <button type="button" class="btn btn-danger data-toggle="modal" data-target="#modal-create-category">Eliminar</button>
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-create-category">Eliminar</button>
                             </td>
                         </tr>
                         <tr>
@@ -98,7 +101,7 @@
                             <td>activo</td>
                             <td>
                                 <button type="button" class="btn btn-warning" data-toggle="" data-target="#modal-create-category">Editar</button>
-                                <button type="button" class="btn btn-danger data-toggle="modal" data-target="#modal-create-category">Eliminar</button>
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-create-category">Eliminar</button>
                             </td>
                         </tr>
                         <tr>
@@ -110,7 +113,7 @@
                             <td>activo</td>
                             <td>
                                 <button type="button" class="btn btn-warning" data-toggle="" data-target="#modal-create-category">Editar</button>
-                                <button type="button" class="btn btn-danger data-toggle="modal" data-target="#modal-create-category">Eliminar</button>
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-create-category">Eliminar</button>
                             </td>
                         </tr>
                         <tr>
@@ -122,7 +125,7 @@
                             <td>Inactivo</td>
                             <td>
                                 <button type="button" class="btn btn-warning" data-toggle="" data-target="#modal-create-category">Editar</button>
-                                <button type="button" class="btn btn-danger data-toggle="modal" data-target="#modal-create-category">Eliminar</button>
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-create-category">Eliminar</button>
                             </td>
                         </tr>
                         <tr>
@@ -134,7 +137,7 @@
                             <td>Activo</td>
                             <td>
                                 <button type="button" class="btn btn-warning" data-toggle="" data-target="#modal-create-category">Editar</button>
-                                <button type="button" class="btn btn-danger data-toggle="modal" data-target="#modal-create-category">Eliminar</button>
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-create-category">Eliminar</button>
                             </td>
                         </tr>
                         <tr>
@@ -146,7 +149,7 @@
                             <td>Activo</td>
                             <td>
                                 <button type="button" class="btn btn-warning" data-toggle="" data-target="#modal-create-category">Editar</button>
-                                <button type="button" class="btn btn-danger data-toggle="modal" data-target="#modal-create-category">Eliminar</button>
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-create-category">Eliminar</button>
                             </td>
                         </tr>
                         <tr>
@@ -158,23 +161,18 @@
                             <td>Activo</td>
                             <td>
                                 <button type="button" class="btn btn-warning" data-toggle="" data-target="#modal-create-category">Editar</button>
-                                <button type="button" class="btn btn-danger data-toggle="modal" data-target="#modal-create-category">Eliminar</button>
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-create-category">Eliminar</button>
                             </td>
                         </tr>
                         
                     </tbody>
                 </table>
             </div>
-            <!-- /.card-body -->
             </div>
-            <!-- /.card -->
         </div>
-        <!-- /.col -->
     </div>
-    <!-- /.row -->
-</div>
 
-<!-- modal -->
+</div>
 
 <div class="modal fade" id="modal-create-category" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
     
@@ -253,7 +251,7 @@
                                     
                             </div>
                             <br>
-                            {{-- <div class="form-group{{ $errors->has('age') ? ' has-error' : '' }}">
+                            <div class="form-group{{ $errors->has('age') ? ' has-error' : '' }}">
                                 <label for="zip" class="col-md-4 control-label">Age</label>
     
                                 <div class="col-md-6">
@@ -265,7 +263,7 @@
                                         </span>
                                     @endif
                                 </div>
-                            </div> --}}
+                            </div> 
 
                                 <div class="col-md-4">
                                     <div class="input-group date">
@@ -300,7 +298,7 @@
                                     
                                 </div>
                             </center>
-                                <!--
+                            
                                 <div class="col-md-4">
                                     <select class="form-control" name="division_id">
                                         <option selected disabled>Select Division</option>
@@ -314,7 +312,7 @@
                                         </span>
                                     
                                 </div>
-                               -->
+
                                     <center>
                                     <div class="col-md-6">
                                      <textarea id="address" type="text" class="form-control" name="address" value="" placeholder="Descripcion"></textarea>
@@ -335,12 +333,11 @@
              </form>
         </div> 
     </div>
-      <!-- /.modal-content -->
+ 
     </div>
-    <!-- /.modal-dialog -->
-</div>
-<!-- /.modal -->
 
+</div>
+ --}}
 @endsection
 
 @section('js')
