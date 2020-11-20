@@ -4,7 +4,10 @@
 @section('title','Admin - Categorias')
 
 @section('css')
+ 
    
+<link rel="stylesheet" type="text/css" href="/DataTables/datatables.css">
+<script type="text/javascript" charset="utf8" src="/DataTables/datatables.js"></script>
 @stop
 
 @section('content_header')
@@ -14,11 +17,15 @@
 @stop
 
 @extends('layouts.app')
-
-
+@extends('adminlte::page')
 
 @section('content')
+
+ 
+
 <index-component></index-component>
+
+
 {{-- <div class="container-fluid">
     <div class="row">
         <div class="col-12">
@@ -198,12 +205,14 @@
 
 @section('js')
 <script>
-$(document).ready(function() {
-    $('#categories').DataTable( {
-        "order": [[ 0, "asc" ]]
+    $(document).ready(function() {
+        $('#cat').DataTable( {
+            "order": [[ 0, "asc" ]]
+        } );
     } );
-} );
 </script>
+ 
+
 <script>
     $(document).ready(function(){
     
