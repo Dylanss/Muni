@@ -26,7 +26,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('index-component', require('./components/muni/IndexComponent.vue').default);
 Vue.component('evaluador-component', require('./components/EvaluadoresComponent.vue').default);
 Vue.component('registro-component', require('./components/RegistroComponent.vue').default);
-
+Vue.component('asignacion-component', require('./components/AsignacionComponent.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

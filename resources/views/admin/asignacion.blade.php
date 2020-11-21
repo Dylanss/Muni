@@ -17,6 +17,10 @@
 
 
 @section('content')
+@yield('body')
+
+<asignacion-component></asignacion-component>
+{{-- 
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
@@ -229,7 +233,7 @@
                                     
                             </div>
                             <br>
-                            {{-- <div class="form-group{{ $errors->has('age') ? ' has-error' : '' }}">
+                             <div class="form-group{{ $errors->has('age') ? ' has-error' : '' }}">
                                 <label for="zip" class="col-md-4 control-label">Age</label>
     
                                 <div class="col-md-6">
@@ -241,7 +245,7 @@
                                         </span>
                                     @endif
                                 </div>
-                            </div> --}}
+                            </div> 
 
                                 <div class="col-md-4">
                                     <div class="input-group date">
@@ -315,6 +319,7 @@
     </div>
     <!-- /.modal-dialog -->
 </div>
+--}}
 <!-- /.modal -->
 
 @endsection
